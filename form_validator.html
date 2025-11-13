@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="text" id="email" placeholder="Email input:">
+<button onclick="email_validator()">Submit</button>
+<p id="message"></p>
+
+<script>
+function email_validator() { //validator
+let email_input = document.getElementById("email").value.trim(); //trims whitespaces
+let message = "";
+
+  if (email_input === "") {
+    message = "Please provide a valid email";
+  }
+  else if (!email_input.includes("@")) { //checks for @
+    message = "Please provide a valid email";
+  }
+  else {
+    message = "validated";
+  }
+
+  document.getElementById("message").innerHTML = message; //output
+  console.log(message)
+}
+</script>
+
+</body>
+</html>  
