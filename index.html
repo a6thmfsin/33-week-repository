@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>Flask hosted video as HTML page</title>
+  <style>
+    video { max-width: 100%; width: 720px; outline: none; }
+  </style>
+</head>
+<body>
+  <h1>Video hosted as HTML page</h1>
+  <video controls preload="metadata" src="{{ url_for('static', filename='video/php.mp4') }}">Video</video>
+</body>
+</html>
